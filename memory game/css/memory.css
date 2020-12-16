@@ -1,0 +1,141 @@
+/*It removes all default margin and padding for every object on the page*/
+*{ 
+	padding: 0;
+	margin: 0;
+}
+
+.header{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+}
+
+.page-title{
+	font-size: 40px;
+	font-weight: normal;
+	text-align: center;
+	color: white;
+	font-family: 'Pacifico', cursive;
+}
+
+#reset{
+	position: fixed;
+	top: 10px;
+	right: 10px;	
+	font-family: 'Pacifico', cursive;
+	background-color: red;
+	border-radius: 50%;
+	border: 1px solid black;
+	height: 80px;
+  	width: 80px;
+}
+
+.main{
+	background-image: url('../images/intro.jpg');
+	background-position-x:center;
+	background-position-y: center;
+	background-size: cover;
+	background-repeat: no-repeat; 
+	width: 100vw;
+	height: 100vh;
+}
+
+.memory-game{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	perspective: 1000px;	
+}
+
+.memory-card{
+	border: 1px solid dodgerblue;
+	opacity: 0.8;
+	border-radius: 25px;
+	position: relative;
+	transform: scale(1);
+	transform-style: preserve-3d;
+	transition: transform 0.5s;
+	width: 100px;
+	margin: 13px;
+}
+
+.memory-card:active{
+	transform: scale(0.97);
+	transition: transform 0.2s;
+}
+
+.memory-card.flip{
+	transform: rotateY(180deg);
+}
+
+.back-face{
+	border: 1px solid black;
+	position: absolute;
+	padding: 5px;
+	border-radius: 25px;
+	backface-visibility: hidden;
+}
+
+.hidden{
+	display: none;
+}
+
+.win{
+	position: fixed;
+	top: 10px;
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+}
+
+.bg-modal{
+	width: 300px;
+	height: 300px;
+	background-color: rgba(0);
+	position: absolute;
+	top:0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.model-content{
+	width: 150px;
+	height: 150px;
+	background-color:dodgerblue;
+	opacity: 0.9;
+	border-radius: 4px;
+	position: relative;
+}
+
+.close{
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 30px;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+#submit{
+	display: block;
+	margin:20px auto;
+}
+
+#won{
+	display: block;
+	margin:20px auto;
+	text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+    .memory-card{
+		width: 80px;
+		height: 80px;
+		}
+	.main{
+		background-image: url('../images/mobile.jpg');
+	}
+}

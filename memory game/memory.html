@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Memory game</title>
+
+	<!-- Cursor -->
+	<style type="text/css">* {cursor: url(http://cur.cursors-4u.net/toons/too-5/too415.cur), auto !important;}</style><a href="http://www.cursors-4u.com/cursor/2006/04/19/too415.html" target="_blank" title="Marge Simpson"><img src="http://cur.cursors-4u.net/cursor.png" border="0" alt="Marge Simpson" style="position:absolute; top: 0px; right: 0px;" /></a>
+
+	<!-- Boostrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+
+	 <!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="./css/memory.css">
+</head>
+
+<body>
+
+<div class="main" >
+
+	<div class="header" >
+		<div class="page-title">
+			<h4>The Simpsons</h4>
+		</div>
+
+		<button id="reset">Reset game</button>
+			
+	</div>
+
+	<div class="memory-game" >	
+		
+		<div class="container fluid" >
+	
+			<div class="row" >
+				<div class="col-6 col-sm-3" ><img class="front-face memory-card" id="card_0" src="images/back.jpg">
+				</div>
+				<div class="col-6 col-sm-3" ><img class="front-face memory-card" id="card_1" src="images/back.jpg">
+				</div>
+				<div class="col-6 col-sm-3" ><img class="front-face memory-card" id="card_2" src="images/back.jpg">
+				</div>
+				<div class="col-6 col-sm-3" ><img class="front-face memory-card" id="card_3" src="images/back.jpg">
+				</div>
+			</div>
+			<div class="row" >
+				
+				<div class="col-6 col-sm-3" ><img class="front-face memory-card" id="card_4" src="images/back.jpg">
+				</div>
+				<div class="col-6 col-sm-3" ><img class="front-face memory-card" id="card_5" src="images/back.jpg">
+				</div>
+				<div class="col-6 col-sm-3" ><img class="front-face memory-card" id="card_6" src="images/back.jpg">
+				</div>
+				<div class="col-6 col-sm-3" ><img class="front-face memory-card" id="card_7" src="images/back.jpg">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6 col-sm-3" ><img class="front-face memory-card" id="card_8" src="images/back.jpg">
+				</div>
+				<div class="col-6 col-sm-3" ><img class="front-face memory-card" id="card_9" src="images/back.jpg">
+				</div>
+				<div class="col-6 col-sm-3" ><img class="front-face memory-card" id="card_10" src="images/back.jpg">
+				</div>
+				<div class="col-6 col-sm-3" ><img class="front-face memory-card" id="card_11" src="images/back.jpg">
+				</div>
+			</div>	
+		</div>
+
+		<div class="bg-modal">
+			<div class="model-content">
+				<div class="close">+</div>
+				<h5 id="won">You won!</h5>
+				<button id="submit">New game</button>
+			</div>
+		</div>
+
+	</div>
+	
+</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="./js/memory.js"></script>
+
+</body>
+</html>
